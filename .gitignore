@@ -1,0 +1,12 @@
+# NEAT checkpoint files
+neat-checkpoint-*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Output files
+NeatTextOutput*.txt
+
