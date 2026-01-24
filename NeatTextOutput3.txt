@@ -1,0 +1,30 @@
+
+**** starting gen 0 ****
+Generation 0 | (stats unavailable)
+
+**** starting gen 1 ****
+Generation 1 | (stats unavailable)
+
+**** starting gen 2 ****
+Generation 2 | (stats unavailable)
+
+**** starting gen 3 ****
+Generation 3 | (stats unavailable)
+
+**** starting gen 4 ****
+Generation 4 | (stats unavailable)
+
+**** starting gen 5 ****
+Generation 5 | (stats unavailable)
+
+**** starting gen 6 ****
+Generation 6 | (stats unavailable)
+
+**** starting gen 7 ****
+Generation 7 | (stats unavailable)
+
+**** starting gen 8 ****
+Generation 8 | (stats unavailable)
+
+**** starting gen 9 ****
+Generation 9 | (stats unavailable)
