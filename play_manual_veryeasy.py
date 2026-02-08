@@ -1,8 +1,8 @@
-"""Manual play script for the EASY version of NEAT platformer.
+"""Manual play script for the VERY EASY version of NEAT platformer.
 Controls: A / Left = move left, D / Right = move right, W / Up / Space = jump
 
 Run with your venv active:
-    python play_manual_easy.py
+    python play_manual_veryeasy.py
 """
 import os
 # ensure headless mode is disabled for manual play
@@ -10,13 +10,13 @@ os.environ.pop('HEADLESS', None)
 
 import pygame
 from pygame.locals import K_a, K_d, K_w, K_LEFT, K_RIGHT, K_UP, K_SPACE, QUIT
-import neatplat_easy as neatplat  # Use easy version
+import neatplat_veryeasy as neatplat  # Use very easy version
 
 pygame.init()
 # use neatplat's screen size values
 SCW, SCH = int(neatplat.SCwidth), int(neatplat.SChight)
 screen = pygame.display.set_mode((SCW, SCH))
-pygame.display.set_caption('Manual Play - EASY MODE - NEAT Platformer')
+pygame.display.set_caption('Manual Play - VERY EASY MODE - NEAT Platformer')
 font = pygame.font.SysFont(None, 28)
 clock = pygame.time.Clock()
 
@@ -49,17 +49,17 @@ while running:
     except Exception:
         screen.blit(neatplat.floor1, (round(SCW * 0.01), int(neatplat.SChight * 0.82)))
     screen.blit(neatplat.enemy1, (round(enemyX), round(enemyY)))
-    # EASY: Goal is at 50% (must match collision box in neatplat_easy.py line 46)
-    screen.blit(neatplat.win, (round(SCW * 0.50), round(neatplat.floor_y - neatplat.win.get_height())))
+    # VERY EASY: Goal is at 40% (must match collision box in neatplat_veryeasy.py line 43)
+    screen.blit(neatplat.win, (round(SCW * 0.40), round(neatplat.floor_y - neatplat.win.get_height())))
     screen.blit(neatplat.player, (round(X), round(Y)))
 
     # HUD
     hud_lines = [
-        '🎮 EASY MODE',
+        '🎮 VERY EASY MODE',
         f'Step: {step}',
         f'Fitness (last step): {fitness:.2f}',
         f'Total fitness: {total_fitness:.2f}',
-        f'Enemy: ({enemyX:.1f}, {enemyY:.1f}) [STATIONARY]',
+        f'Enemy: ({enemyX:.1f}, {enemyY:.1f}) [STATIONARY - FIXED AT 25%]',
         f'Player: ({X:.1f}, {Y:.1f})',
         f'Goal distance: {goaldis:.1f}',
         f'Death: {death}',  # Debug: show death status
@@ -73,7 +73,7 @@ while running:
 
     if death:
         # show message briefly then reset
-        if fitness >= 600:  # Won! (matches the +600 reward in neatplat_easy.py)
+        if fitness >= 600:  # Won! (matches the +600 reward in neatplat_veryeasy.py)
             # Create larger, more visible win message
             win_font = pygame.font.SysFont(None, 72)
             msg = win_font.render('🎉 YOU WON! 🎉', True, (0, 255, 0))
