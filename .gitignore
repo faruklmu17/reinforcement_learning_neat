@@ -1,12 +1,17 @@
 # NEAT checkpoint files
 neat-checkpoint-*
 
+# Output files
+NeatTextOutput*.txt
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
 # Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Output files
-NeatTextOutput*.txt
 
